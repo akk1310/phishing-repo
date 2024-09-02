@@ -12,8 +12,8 @@ python main.py
 # 0 = False | 1 True
 
 //how to run frontend file using Flask
-import Flask
-import flask-cors
+pip install flask
+pip install flask-cors
 Run->>python app.py
 
 #Open http://127.0.0.1:5000 in your browser!
