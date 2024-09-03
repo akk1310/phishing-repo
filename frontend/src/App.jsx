@@ -1,37 +1,27 @@
-import { useState } from 'react'
-import './App.css'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Faqs from './components/Faqs'
-import ContactUs from './components/ContactUs'
-import Products from './components/Products'
-
-
+import { useState } from 'react';
+import './App.css';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Faqs from './components/Faqs';
+import ContactUs from './components/ContactUs';
+import Products from './components/Products';
+import bgImg from './assets/bgg5.jpg';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <div className="app absolute inset-0  -z-10 min-h-screen h-screen w-full bg-blue-50 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+    <div className='p-2' style={{ backgroundImage: `url(${bgImg})`,
+    // backgroundSize: 'cover',      // Makes the image cover the div
+    // backgroundPosition: 'center', // Centers the image
+    backgroundRepeat: 'no-repeat'  }} >
       <Navbar />
       <Hero />
       <Products />
       <Faqs />
       <ContactUs />
-
-    
-      
- </div>
-  )
-// return (
-//   <Layout>
-//     <Navbar />
-//     <Hero />
-//     <Products />
-//     <Faqs />
-//     <ContactUs />
-//   </Layout>
-// );
+    </div>
+  );
 }
 
-export default App
+export default App;

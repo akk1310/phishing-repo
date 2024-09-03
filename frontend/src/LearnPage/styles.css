@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+.section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.section img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.section h2 {
+    color: #0073e6;
+    margin-top: 20px;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.section p {
+    line-height: 1.8;
+    margin: 20px auto;
+    font-size: 1.1em;
+    width: 90%;
+    text-align: left;
+}
+
+/* types of phishing attacks section start*/
+
+#types-heading {
+    color: #1a1a1a;
+    font-size: 1.6em !important;
+}
+
+.types h2 {
+    text-align: center;
+    font-size: 1.5em !important; 
+}
+
+/* types of phishing attacks section end*/
+
+.button a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+}
+
+.section a:hover {
+    background-color: #e8e8e8;
+}
+
+footer {
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .section img {
+        max-width: 100%;
+    }
+    .section p {
+        width: 100%;
+    }
+}

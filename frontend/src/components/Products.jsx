@@ -1,12 +1,14 @@
 import React from 'react';
 import bgImg from '../assets/bg9.jpeg'
+import bgImg1 from '../assets/pa.png'
+import bgImg2 from '../assets/workprog.gif'
 
 
 function Products() {
   return (
     
     <div  style={{backgroundImage:`url(${bgImg})`}} className="border-2 relative h-screen Products py-12 bg-gray-100">
-      <div className="max-w-7xl mb-28 flex flex-col mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mb-36 flex flex-col mx-auto px-4 sm:px-6 lg:px-8">
         
 
         <h2 className="text-5xl text-red-600 bg-green-500 p-2 mx-auto border-2 w-96  text-center font-bold  mb-8">Our Products</h2>
@@ -19,11 +21,12 @@ function Products() {
             </p>
             <img 
               className="w-full mb-4 rounded-lg" 
-              src="https://media.giphy.com/media/l0MYNBmsLG2t7XHtC/giphy.gif" 
+              src={bgImg1} 
               alt="Phishing Awareness Website" 
             />
             <a 
-              href="#" 
+              href="./LearnPage/learn-page.html" 
+              target='_blank'
               className="text-indigo-600 hover:underline"
             >
               Learn More
@@ -36,8 +39,8 @@ function Products() {
               Our browser extension helps protect users from phishing attempts by alerting them to suspicious websites and emails.
             </p>
             <img 
-              className="w-full mb-4 rounded-lg" 
-              src="https://media.giphy.com/media/26n6xBpxNXExDfuKQ/giphy.gif" 
+              className="w-80 mb-4 rounded-lg mx-auto border-2 " 
+              src={bgImg2} 
               alt="Phishing Protection Browser Extension" 
             />
             <a 
@@ -49,7 +52,7 @@ function Products() {
           </div>
         </div>
       </div>
-      <hr  className='h-2 w-full bg-yellow-500'/>
+      <hr  className='h-2  w-full bg-yellow-500'/>
     </div>
     
   );
