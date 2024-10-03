@@ -11,10 +11,13 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className='p-2' style={{ backgroundImage: `url(${bgImg})`,
-    // backgroundSize: 'cover',      // Makes the image cover the div
-    // backgroundPosition: 'center', // Centers the image
-    backgroundRepeat: 'no-repeat'  }} >
+    <div className='py-2 bg-slate-50 ' 
+    // style={{ backgroundImage: `url(${bgImg})`,
+    // // style={{ backgroundImage: `url(${bgImg})
+    // // backgroundSize: 'cover',      // Makes the image cover the div
+    // // backgroundPosition: 'center', // Centers the image
+    // backgroundRepeat: 'no-repeat'  }}
+     >
       <Navbar />
       <Hero />
       <Products />
