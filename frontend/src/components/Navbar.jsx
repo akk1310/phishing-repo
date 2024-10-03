@@ -27,15 +27,15 @@ function Navbar() {
         
             <div className='navbar fixed max-w-screen  left-0 right-0 top-0 z-10 flex items-center h-20 justify-around bg-white border-b-2'>
 
-                <div className='logo text-3xl flex items-center text-green-500 font-bold mr-96 cursor-pointer'>
+                <div className='logo text-3xl flex items-center text-blue-600 font-bold mr-96 cursor-pointer'>
                     SmartGuard
                     <span><img className='w-10' src="src\assets\lock2.gif" alt="lock" /></span>
                 </div>
                 <div className='nav ml-48'>
-                    <ul className='flex gap-10 text-lg font-bold items-center justify-center' >
+                    <ul className='flex gap-10 text-xl items-center justify-center' >
                     {navItems.map(({ id, text }) => (
                 <li
-                  className="hover:scale-105 duration-200 cursor-pointer hover:border-b-2 border-red-500"
+                  className="hover:scale-105 duration-200 text-blue-300  cursor-pointer hover:border-b-2 border-red-500"
                   key={id}
                 >
                   <Link
