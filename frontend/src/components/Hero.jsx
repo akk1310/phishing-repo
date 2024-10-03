@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import bgImg from '../assets/fb2.gif';
-import bgImg1 from '../assets/i1.gif';
+// import bgImg from '../assets/fb2.gif';
+// import bgImg2 from '../assets/ph1.gif';
+// import bgImg1 from '../assets/i1.gif';
 import './Hero.css'; 
 import loaderGif from '../assets/cyber-security.gif'; // Import the loader GIF
 
@@ -22,10 +23,10 @@ const Hero = () => {
         },
         body: JSON.stringify({ url })
       });
-      setIsPhishing(data.phishing === 1);
-
       const data = await response.json();
+      
       setResult(data.phishing == 1 ? 'Warning: This URL is likely a phishing attempt.' : 'This URL appears to be safe.');
+      setIsPhishing(data.phishing === 1);
       setTimeout(() => {
         setUrl('');
         setResult(null);
@@ -44,16 +45,16 @@ const Hero = () => {
 
   return (
     <>
-      <div className=' Home mb-32 flex m-4 mt-40 justify-center ml-20 min-h-[450px]'>
+      <div className=' Home mb-32 flex m-4 mt-32 justify-center ml-20 min-h-[450px]   '>
         {/* <img  className='bg-no-repeat h-full ' src="src\assets\fish5.gif" alt="fish" /> */}
         {/* or */}
-        <img style={{ backgroundImage: `url(${bgImg})` }} className='bg-no-repeat h-full border-2' src="src\assets\fish3.gif" alt="fish" />
-        <div className='bg-no-repeat bg-right-bottom relative container border-2 w-1/2 mx-auto flex flex-col items-center gap-16 p-5'>
-          <h1 className='text-center font-bold text-3xl underline-offset-8 underline text-red-500'>Phishing Detection</h1>
-          <div className="logo flex text-green-500 font-bold text-3xl">SmartGuard
+        {/* <img style={{ backgroundImage: `url(${bgImg})` }} className='bg-no-repeat h-full border-2' src="src\assets\fish3.gif" alt="fish" /> */}
+        <div className='bg-no-repeat bg-right-bottom relative container  w-1/2 mx-auto flex flex-col items-center gap-16 p-5 pl-44  pt-24  '>
+          <h1 className='text-center font-bold text-3xl underline-offset-8 underline text-yellow-500'>Phishing Detection</h1>
+          <div className="logo flex text-blue-500 font-bold text-3xl">SmartGuard
             <span><img className='w-10' src="src\assets\lock2.gif" alt="lock" /></span>
           </div>
-          <form onSubmit={handleSubmit} className="max-w-xl mx-auto w-full absolute top-48">
+          <form onSubmit={handleSubmit} className="max-w-xl mx-auto w-full absolute top-80">
             <div className="mb-5 mt-10 flex gap-5 w-full">
               <input
                 value={url}
@@ -66,9 +67,9 @@ const Hero = () => {
               />
               <button
                 type="submit"
-                className="text-white bg-green-400 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-blue-800"
+                className="text-white bg-green-400 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-6 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
-                Submit
+                Analyze
               </button>
             </div>
           </form>
@@ -77,19 +78,21 @@ const Hero = () => {
             <div className="loader-circle absolute top-80"></div>
           )} */}
           {loading && (
-            <div className="absolute top-80">
+            <div className="absolute top-[450px]">
               <img src={loaderGif} alt="Loading..." className="w-24 h-24" />
             </div>
           )}
 
           {result && (
-            <div className={`result absolute top-80 text-lg font-bold ${isPhishing ? 'text-red-500' : 'text-green-500'}`}>
+            <div className={`result absolute top-[450px] pl-5 text-2xl font-bold ${isPhishing ? 'text-red-500' : 'text-green-500'}`}>
               {result}
             </div>
           )}
         </div>
+        <img  className='bg-no-repeat w-[1000px] h-full ' src="src\assets\bag1.png" alt="fish" />
+
       </div>
-      <hr className='h-3 w-full bg-red-600' />
+      <hr className='h-3  w-full bg-red-600' />
     </>
   );
 };
