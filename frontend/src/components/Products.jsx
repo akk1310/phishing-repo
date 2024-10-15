@@ -1,7 +1,7 @@
 import React from 'react';
 import bgImg from '../assets/bg9.jpeg'
 import bgImg1 from '../assets/pa.png'
-import bgImg2 from '../assets/workprog.gif'
+import bgImg2 from '../assets/ext1.png'
 
 
 function Products() {
@@ -44,7 +44,8 @@ function Products() {
               alt="Phishing Protection Browser Extension" 
             />
             <a 
-              href="https://example.com/browser-extension" 
+            target='_blank'
+              href="https://github.com/akk1310/Extension" 
               className="text-green-600 hover:underline"
             >
               Download Now
