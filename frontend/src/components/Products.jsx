@@ -45,10 +45,17 @@ function Products() {
             />
             <a 
             target='_blank'
-              href="https://github.com/akk1310/Extension" 
+              href="https://github.com/akk1310/Extension/archive/refs/heads/main.zip" 
               className="text-green-600 hover:underline"
             >
               Download Now
+            </a>
+            <a 
+            target='_blank'
+              href="https://github.com/akk1310/Extension" 
+              className="text-green-600 hover:underline"
+            >
+              Gtihub Link
             </a>
           </div>
         </div>
