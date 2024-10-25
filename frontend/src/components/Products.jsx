@@ -43,20 +43,23 @@ function Products() {
               src={bgImg2} 
               alt="Phishing Protection Browser Extension" 
             />
+            <div className='flex justify-between '>
+
             <a 
             target='_blank'
-              href="https://github.com/akk1310/Extension/archive/refs/heads/main.zip" 
-              className="text-green-600 hover:underline"
+            href="https://github.com/akk1310/Extension/archive/refs/heads/main.zip" 
+            className="text-green-600 hover:underline"
             >
               Download Now
             </a>
             <a 
             target='_blank'
-              href="https://github.com/akk1310/Extension" 
-              className="text-green-600 hover:underline"
+            href="https://github.com/akk1310/Extension" 
+            className="text-green-600 hover:underline"
             >
               Gtihub Link
             </a>
+            </div>
           </div>
         </div>
       </div>
